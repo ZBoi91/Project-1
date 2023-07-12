@@ -5,7 +5,7 @@ var allMemes = ["badluck","blackman","boy","doge","nmjgg","overly","philosorapto
 // Array to store clicked memes
 var clickedMemes = [];
 // Show memes function
-function showMemes(eid)
+function showMeme(eid)
 {
 	// Get Click counter
 	var allClicks = document.getElementById("clicks").innerHTML;
@@ -48,7 +48,7 @@ function showMemes(eid)
 					// Hide the second memes
 					document.getElementById(clickedMemes[1]).style.display = "none";
 					// Enable the mouse pointer event for first memes
-					document.getElementById("memes"+clickedMemes[0]).style.pointerEvents = "memes";
+					document.getElementById("memes"+clickedMemes[0]).style.pointerEvents = "auto";
 					// Enable the mouse pointer event for second memes
 					document.getElementById("memes"+clickedMemes[1]).style.pointerEvents = "auto";
 					// Empty the clickedMemes array
@@ -66,33 +66,10 @@ function gameStart()
 	// Loop through all memes images
 	for(var e = 0; e < memes.length; e++)
 	{
-		// Generate one random memes from the array
-		var randomMemes = allMemes.splice(allMemes.length * Math.random() | 0, 1)[0];
-		// Set the random generated memes image
-		document.getElementsByClassName("memes")[e].innerHTML += "<img id='"+e+"' src='memes/"+randomMemes+".jpg' width='130' height='130' style='display: none;' />";
-		// To get to refresh the game
-		document.getElementById("memes"+clickedMemes[2]).style
-		pointerEvents = "auto";
-		//Empty the clickedMemes array
-		clickedMemes = [];
-		var memes = document.querySelectorAll(".memes");
-		for(var e = 0; e < memes.length; e++)
-		{
-			var randomeMemes = allMemes.splice(allMemes.length)
-		}
-		{
-			var randomMemes = allMemes.splice(allMemes.length * Math.random() | 0, 1)[0];
-		}
-	}
-	var memes = document.querySelectorAll(".memes");
-	for(var e =0; e < memes.length; e++)
-	{
-		var randomMemes = allMemes.splice(allMemes.length * Math.random() | 0, 1[0]);
-		document.getElementsByClassName("memes")[e].innerHTML += "<img id='"+e+"' src='memes/"+randomMemes+".jpg' width='130' height='130' style='display: none;' />";
-		document.getElementById("meme"+clickedMemes[1]).style
-		pointerEvents = "auto";
-		clickedMemes = [];
-		var memes = document.querySelectorAll
+		// Generate one random meme from the array
+		var randomMeme = allMemes.splice(allMemes.length * Math.random() | 0, 1)[0];
+		// Set the random generated meme image
+		document.getElementsByClassName("memes")[e].innerHTML += "<img id='"+e+"' src='images/"+randomMeme+".jpg' width='130' height='130' style='display: none;' />";
 	}
 }
 // Start the game
